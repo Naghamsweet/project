@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">  
+
+</head>
+<body>
+
+<h1>Student Plan</h1>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'اجباري جامعة')">متطلب جامعة (اجبارية)</button>
+  <button class="tablinks" onclick="openCity(event, 'اختياري جامعة')"> متطلب جامعة (اختيارية)</button>
+  <button class="tablinks" onclick="openCity(event, 'اجباري كلية')">متطلب كلية (اجباري)</button>
+  <button class="tablinks" onclick="openCity(event, 'اجباري تخصص')">متطلب تخصص (اجباري)</button>
+  <button class="tablinks" onclick="openCity(event, 'اختياري تخصص')">متطلب تخصص (اختيارية) </button></div>
+
+<div id="اجباري جامعة" class="tabcontent">
+  <h3> متطلب جامعة (اجبارية)</h3>
+  <table>
+      <th style="width:25%;">رمز المقرر</th>
+            <th style="width:25%;">اسم المساق </th>
+            <th style="width:25%;">عدد الساعات </th>
+      </th>
+      <tr>
+      
+        <td>15200101	</td>
+        <td> 	القضية الفلسطينية</td>
+        <td> 3</td>
+      </tr>
+      <tr>
+        <td>15200102	 </td>
+        <td>اللغة العربية	</td>
+        <td> 3</td>
+      </tr>
+      <tr>
+        <td>15200103		</td>
+        <td>مهارات الاتصال</td>	
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>15200104</td>
+        <td>	خدمة المجتمع</td>	
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>15200106</td>
+        <td> اللغة الإنجليزية (1)</td>	
+        <td>3</td>
+      </tr> 
+      <tr>
+          <td>15200107</td>
+          <td>الدراسات الإسلامية</td>
+          <td>3</td>
+        </tr><tr>
+          <td>15041101</td>
+          <td>مهارات وتطبيقات الحاسوب</td>
+          <td>3</td>	
+        </tr>
+  </table>
+</div>
+
+
+
+<div id="اختياري جامعة" class="tabcontent">
+    <h3> متطلب جامعة (اختيارية)</h3>
+    <table>
+        <th style="width:25%;">رمز المقرر</th>
+              <th style="width:25%;">اسم المساق </th>
+              <th style="width:25%;">عدد الساعات </th>
+        </th>
+        <tr>
+        
+          <td>15200108</td>
+          <td> حل المشاكل</td>
+          <td> 3</td>
+          
+        </tr>
+        <tr>
+            <td>15200109</td>
+            <td>الفكر الاسلامي</td>
+            <td> 3</td>
+        </tr>
+        <tr>
+            <td>15200110</td>
+            <td>التربية الرياضية والإسعافات الأولية</td>
+            <td> 3</td>
+        </tr>
+        <tr>
+            <td>15200111 </td>
+            <td>مدخل إلى علم نفس</td>
+            <td> 3</td>
+        </tr>
+        <tr>
+            <td>15200113</td>
+            <td>فنون معمارية</td>
+            <td> 3</td>
+        </tr>
+        <tr>
+            <td>12210101</td>
+            <td>مقدمة في هندسة السيارات	</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>15200120</td>
+            <td>تنشئة الأطفال وبناء الأسرة</td>
+            <td>3</td>
+        </tr> 
+        <tr>
+            <td>15200183</td>
+            <td>مكافحة الفساد التحديات والحلول </td>
+            <td>3</td>
+          </tr><tr>
+            <td>15200144	</td>
+            <td> لغة تركية</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>15200143	</td>
+            <td>لغة روسية </td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>15200125</td>
+            <td>علم الإجتماع</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>15200132</td>
+            <td>الرياضة والصحة</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>15200181</td>
+            <td>الحركة الأسيرة الفلسطينية</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>15200181</td>
+            <td>مبادئ تغذية</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>15200115</td>
+            <td>علم الحديث</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>15200129</td>
+            <td>علاقات دولية</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>15200141</td>
+            <td>لغة فرنسية</td>
+            <td>3</td>
+          </tr>
+    </table>
+  </div>
+
+  <div id="اجباري كلية" class="tabcontent">
+    <h3> متطلب كلية (اجباري)</h3>
+    <table>
+        <th style="width:25%;">رمز المقرر</th>
+              <th style="width:25%;">اسم المساق </th>
+              <th style="width:25%;">عدد الساعات </th>
+        </th>
+        <tr>
+        
+            <td>12210325</td>
+            <td> الكتابة التقنية واخلاقيات المهنه</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>12210136</td>
+            <td>رسم هندسي	 </td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>12210137</td>
+        <td>مشغل هندسي	 </td>
+        <td>1</td>
+          </tr>
+          <tr>
+            <td>15010229</td>
+            <td>رياضيات هندسية (1)	</td>
+            <td>3</td>	
+          </tr>
+          <tr>
+        
+            <td>14140412</td>
+            <td> اقتصاد هندسي	</td>
+            <td> 3</td>
+        </tr>
+        <tr>
+
+        
+                <td>15010101</td>
+                <td> تفاضل وتكامل (1)	</td>
+                <td> 3</td>
+            </tr>
+            <tr>
+                <td>15010102</td>
+                <td>تفاضل وتكامل (2)	</td>
+                <td>3</td>
+            </tr> 
+            <tr>
+                <td>15200112</td>
+                <td>اللغة الإنجليزية (2)	 </td>
+                <td>3</td>
+            </tr>
+            <td>15020101 </td>
+            <td>فيزياء عامه (1)	</td>
+            <td> 3</td>
+        </tr>
+        <tr>
+            <td>15020102	</td>
+            <td>فيزياء عامه (2)</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>15020105	</td>
+            <td>مختبر فيزياء عامه (1) </td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>15020106</td>
+            <td>مختبر فيزياء عامه (2) </td>
+            <td>1</td>
+        </tr>
+          <tr>
+            <td>15050101</td>
+        <td>كيمياء عامة (1)	 </td>
+        <td>3</td>
+        </tr>
+        <td>15010230</td>
+        <td> رياضيات هندسية (2)</td>
+        <td>3</td>
+       
+        
+    </table>
+  </div>
+  <div id="اجباري تخصص" class="tabcontent">
+    <h3> متطلب تخصص (اجباري)</h3>
+    <table>
+        <th style="width:25%;">رمز المقرر</th>
+              <th style="width:25%;">اسم المساق </th>
+              <th style="width:25%;">عدد الساعات </th>
+        </th>
+        <tr>
+        
+            <td>15010325</td>
+            <td> تحليل عددي	</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>12140532</td>
+            <td>الذكاء الصناعي	</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>12130302</td>
+        <td>الاشارات والنظم</td>
+        <td>3</td>
+          </tr>
+          <tr>
+            <td>12130303</td>
+            <td>الاحتمالات والمتغيرات العشوائية</td>
+            <td>3</td>	
+          </tr>
+          <tr>
+        
+            <td>12140102</td>
+            <td>البرمجة الكينونية</td>
+            <td> 4</td>
+        </tr>
+        <tr>
+                <td>12140203</td>
+                <td> تركيب بيانات</td>
+                <td> 3</td>
+            </tr>
+            <tr>
+                <td>12140204</td>
+                <td>تراكيب الحوسبة المتقطعة	</td>
+                <td>3</td>
+            </tr> 
+            <tr>
+                <td>12140205</td>
+                <td>تحليل وتصميم الخوارزميات</td>
+                <td>3</td>
+            </tr>
+            <td>12110236</td>
+            <td>الدوائر الكهربائية</td>
+            <td> 3</td>
+        </tr>
+        <tr>
+            <td>12110237</td>
+            <td>مختبر دوائر كهربائية</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>12120205</td>
+            <td>الكترونيات</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>12120206</td>
+            <td>مختبر الكترونيات</td>
+            <td>1</td>
+        </tr>
+          <tr>
+            <td>12140101</td>
+        <td>برمجة حاسوب	</td>
+        <td>3</td>
+        </tr>
+        <td>12140308</td>
+        <td>نظم تشغيل</td>
+        <td>3</td>
+        <tr>
+            <td>12110316</td>
+        <td>الكترونيات رقمية</td>
+        <td>3</td>
+        </tr>
+        <td>12140309</td>
+        <td> انظمة قواعد البيانات</td>
+        <td>3</td>
+        <tr>
+            <td>12140523</td>
+        <td>تقنيات الانترنت وتطبيقات الويب </td>
+        <td>3</td>
+        </tr>
+        <tr>
+        <td>12140412</td>
+        <td>تحليل وتصميم انظمة المعلومات</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>12140414</td>
+        <td> المعالجات الدقيقة ولغة الاسمبلي</td>
+        <td>3</td>
+    </tr> <tr>
+        <td>12140415</td>
+        <td>مختبر المعالجات الدقيقة ولغة اسمبلي	</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>12140418</td>
+        <td> هندسة البرمجيات</td>
+        <td>3</td>
+    </tr> <tr>
+        <td>12140413</td>
+        <td>معمارية الحاسوب	</td>
+        <td>3</td>
+    </tr> <tr>
+        <td>12210355</td>
+        <td>أنظمة التحكم (1)</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>12130527</td>
+        <td>معالجة الاشارات الرقمية	</td>
+        <td>3</td>
+    </tr> <tr>
+        <td>12130350</td>
+        <td>انظمة الاتصالات	</td>
+        <td>3</td>
+    </tr>
+     <tr>
+        <td>12140420</td>
+        <td>التصميم المنطقي عالي المستوى</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>12140521</td>
+        <td>مقدمة مشروع تخرج</td>
+        <td>1</td>
+    </tr>
+     <tr>
+        <td>12140524</td>
+        <td> مشروع تخرج</td>
+        <td>3</td>
+    </tr> <tr>
+        <td>12120207</td>
+        <td> تصميم الدوائر المنطقية</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>12120208</td>
+        <td> مختبر تصميم الدوائر المنطقية</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>12140312</td>
+        <td>شبكات الحاسوب</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>12140313</td>
+        <td>مختبر شبكات حاسوب</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>12140510</td>
+        <td> برمجة الشبكات</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>12140314	</td>
+        <td> مختبر انظمة قواعد بيانات</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>12140208</td>
+        <td> مختبر تركيب البيانات</td>
+        <td>1</td>
+    </tr>
+        
+    </table>
+  </div>
+  <div id="اختياري تخصص" class="tabcontent">
+    <h3> متطلب تخصص (اختيارية)</h3>
+    <table>
+        <th style="width:25%;">رمز المقرر</th>
+              <th style="width:25%;">اسم المساق </th>
+              <th style="width:25%;">عدد الساعات </th>
+        </th>
+        <tr>
+        
+          <td>12210467</td>
+          <td>المجسات ومحولات الطاقة</td>
+          <td> 3</td>
+        </tr>
+        <tr>
+            <td>12140526</td>
+            <td>مواضيع متقدمة في قواعد البيانات</td>
+            <td> 3</td>
+        </tr>
+        <tr>
+            <td>12140527</td>
+            <td>التشفير و امن الشبكات</td>
+            <td> 3</td>
+        </tr>
+        <tr>
+            <td>12130415</td>
+            <td>أنظمة الألياف الضوئية</td>
+            <td> 3</td>
+        </tr>
+        <tr>
+            <td>12140528</td>
+            <td>الحوسبة المتوازية</td>
+            <td> 3</td>
+        </tr>
+        <tr>
+            <td>12140529</td>
+            <td>تصميم المترجمات</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>12140530</td>
+            <td>نظرية التحويل والتشغيل الذاتي</td>
+            <td>3</td>
+        </tr> 
+        <tr>
+            <td>12140531</td>
+            <td>أنظمة تشغيل متقدمة </td>
+            <td>3</td>
+          </tr><tr>
+            <td>12140533</td>
+            <td>تعلم الالة</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140534</td>
+            <td>محاكاة الانظمة الحاسوبية</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140535</td>
+            <td>تنجيم البيانات</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140536</td>
+            <td>لغات البرمجة المرئية</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140537</td>
+            <td>مواضيع خاصة في هندسة انظمة الحاسوب</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140538</td>
+            <td>الدارات المتكاملة المتعددة</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140539</td>
+            <td>أساسيات التجارة الالكترونية</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140540</td>
+            <td>الانظمة الموزعة</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140541</td>
+            <td>لغات برمجة</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12130523</td>
+            <td>نظرية المعلومات والترميز</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140542</td>
+            <td>معالجة الصور</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140543</td>
+            <td>التقاط الأنماط	</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140544</td>
+            <td>أنظمة الوقت الحقيقي</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12110339</td>
+            <td>اختبار الدوائر الرقمية</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140546</td>
+            <td>تقييم اداء انظمة الحاسوب</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140548</td>
+            <td>شبكات الحاسوب المتقدمة</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140549</td>
+            <td>الحوسبة المتنقلة</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140551</td>
+            <td>الانظمة الوسائط المتعددة</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140552</td>
+            <td>انماط التصميم</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140555</td>
+            <td>معالجة اشارات الصوت</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140525</td>
+            <td>التحسين الهندسي</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140557</td>
+            <td>الجرافيكس</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12210583</td>
+            <td>التحكم الرقمي</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140416</td>
+            <td>الانظمة المدمجة</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140547</td >
+            <td>الحوسبة الموثوقة</td>
+            <td>3</td>
+          </tr>
+          <tr>	
+            <td>12140550</td>
+            <td>بروتوكولات التحكم بالانترنت</td>
+            <td>3</td>
+          </tr>
+
+    </table>
+  </div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 
