@@ -7,10 +7,10 @@
     <body>
         <div class="hero">
         <div class="form-box">
-        <a href="login.html"><input type="button" value="Login" class="button a"> </a>
-        <a href="about.html"><input type="button" value="About" class="button a"> </a>
-        <a href="StudentRegistration.html"><input type="button" value="contact" class="button a"> </a>
-        <a href="FinancialRecords.html"><input type="button" value="How to use" class="button a"> </a>
+        <a href="{{ url_for('login.html') }}"><input type="button" value="Login" class="button a"> </a>
+        <a href="{{ url_for('about.html') }}"><input type="button" value="About" class="button a"> </a>
+        <a href="{{ url_for('StudentRegistration.html') }}"><input type="button" value="contact" class="button a"> </a>
+        <a href="{{ url_for('FinancialRecords.html') }}"><input type="button" value="How to use" class="button a"> </a>
         </div>
     </div>
     </body>
