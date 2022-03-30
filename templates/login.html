@@ -4,25 +4,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title> Login Page </title>
 <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script> 
 
 </head>  
 <body>  
     <center> <h1> Student Login Form </h1> </center> 
-    <form>
+    <form id="info"action="loginforstudent" method="POST">
         <div class="container"> 
             <label>Username : </label> 
-            <input type="text" placeholder="Enter Username" name="username" required>
+            <input type="text" placeholder="Enter Username" name="username" id="name" required>
             <br>
             <br>
             <label>Password : </label> 
-            <input type="password" placeholder="Enter Password" name="password" required>
+            <input type="password" placeholder="Enter Password" name="password" id="pass"required>
             <br>
             <br>
             <button type="submit">Login</button>
     
         </div> 
     </form>   
-</body>   
+</body>
+<Script>
+ 
+    if(annyang) {
+      
+       var commands = {
+        'اسمي *tag':function(variable){
+        let uname=document.getElementById('name');
+        uname.value=variable;
+        },
+        'كلمه السر *tag':function(variable){
+        let password= document.getElementById('pass');
+        password.value=variable;
+        },
+        'سجل':function(){
+        let username=document.getElementById('name').value;
+         let pass=document.getElementById('pass').value;    
+         if (username=="" || pass==""){
+               alert('Please enter the fields');
+               
+            }
+            else{
+             
+              document.getElementById('info').submit();
+            }
+           },
+           'رجوع':function(){
+          
+              
+          }, 
+         }
+       };
+       annyang.setLanguage('ar-JO');
+       // Add our commands to annyang
+       annyang.addCommands(commands);
+     
+   
+       annyang.start({ autoRestart: true, continuous: true });
+   
+   </script>   
 </html>
 
  

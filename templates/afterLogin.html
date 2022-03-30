@@ -5,22 +5,55 @@
 <title>After Login Page </title>
 
 <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script> 
 
     </head>
     <body>
         <center> <h1> Student Page </h1> </center> 
         <form>
         <div class="container">
-        <a href="{{ url_for('StudentSchedule.html') }}"><input type="button" value="Student Schedule" class="button1 a"> </a>
+        <a href="{{ url_for('StudentSchedule') }}"><input type="button" value="Student Schedule" class="button1"> </a>
         <br><br>
-        <a href="{{ url_for('StudentPlan.html') }}"><input type="button" value="Student Plan" class="button1 a"> </a>
+        <a href="{{ url_for('StudentPlan') }}"><input type="button" value="Student Plan" class="button1"> </a>
         <br><br>
-        <a href="{{ url_for('StudentRegistration.html') }}"><input type="button" value="Student Registration" class="button1 a"> </a>
+        <a href="{{ url_for('StudentRegestration') }}"><input type="button" value="Student Registration" class="button1"> </a>
         <br><br>
         <button type="button" onclick="alert('500!')" class="button1 a">Financial Records</button>
 
     </div>
     
     </body>
+    <Script>
+ 
+        if(annyang) {
+           
+           var commands = {
+            'الجدول الدراسي':function(){     
+              document.getElementsByClassName("button1")[0].click();
 
+             },
+            'خطه الدراسه':function(){
+              document.getElementsByClassName("button1")[1].click();
+   
+             },
+             'تسجيل المواد':function(){
+              document.getElementsByClassName("button1")[2].click();
+           
+            },
+            
+             'رجوع':function(){
+          
+              
+          }, 
+             
+             }
+           };
+           annyang.setLanguage('ar-JO');
+           // Add our commands to annyang
+           annyang.addCommands(commands);
+         
+       
+           annyang.start({ autoRestart: true, continuous: true });
+       
+       </script>
 </html>

@@ -15,10 +15,6 @@ import pymysql
 
 
 
-
-
-
-
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
 
@@ -26,8 +22,38 @@ app.secret_key = "manbearpig_MUDMAN888"
 def index():
     return render_template("main.html")
 
+@app.route("/login")
+def login():
+    return render_template("login.html")
 
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+@app.route("/Howtouse")
+def Howtouse():
+    return render_template("Howtouse.html")
+
+@app.route("/loginforstudent" ,methods=['POST'] )
+def loginforstudent():
+    return render_template("afterLogin.html")
+
+@app.route("/StudentSchedule")
+def StudentSchedule():
+    return render_template("StudentSchedule.html")
+
+@app.route("/StudentPlan")
+def StudentPlan():
+    return render_template("StudentPlan.html")
+
+@app.route("/StudentRegestration")
+def StudentRegestration():
+    return render_template("StudentRegestration.html")
 
 
 if __name__=="__main__":

@@ -1,18 +1,46 @@
 <html>
     <head>
         <title>Main Page</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">  
+       <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script> 
     </head>
     <body>
         <div class="hero">
-        <div class="form-box">
-        <a href="{{ url_for('login.html') }}"><input type="button" value="Login" class="button a"> </a>
-        <a href="{{ url_for('about.html') }}"><input type="button" value="About" class="button a"> </a>
-        <a href="{{ url_for('StudentRegistration.html') }}"><input type="button" value="contact" class="button a"> </a>
-        <a href="{{ url_for('FinancialRecords.html') }}"><input type="button" value="How to use" class="button a"> </a>
-        </div>
+          
+            <a href="{{ url_for('login') }}"><input type="button" value="Login" class="button"> </a>
+            <a href="{{ url_for('about') }}"><input type="button" value="About" class="button"> </a>
+            <a href="{{ url_for('contact') }}"><input type="button" value="contact" class="button"> </a>
+            <a href="/Howtouse"><input type="button" value="How to use" class="button "> </a>
     </div>
     </body>
+<Script>
 
+ if(annyang) {
+    
+    var commands = {
+       'دخول':function(){     
+           document.getElementsByClassName("button")[0].click();
+      },
+       'معلومات':function(){
+        window.location.replace("http://127.0.0.1:9000/about ")
+
+      },
+      'تواصل':function(){
+        document.getElementsByClassName("button")[2].click();
+
+       },
+      'كيفيه الاستخدام':function(){
+        document.getElementsByClassName("button")[3].click();
+       },
+      
+      }
+    };
+    annyang.setLanguage('ar-JO');
+    // Add our commands to annyang
+    annyang.addCommands(commands);
+  
+
+    annyang.start({ autoRestart: true, continuous: true });
+
+</script>
 </html>
