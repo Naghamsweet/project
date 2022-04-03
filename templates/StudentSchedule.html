@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentSchedule</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+</head>
+<body>
+    <table> 
+        <thead> 
+        <tr> 
+            <th>Name</th> 
+            <th>course</th>
+            
+        </tr> 
+        </thead> 
+        <tbody> 
+            {% for row in course %}  
+                <tr> 
+                    <td>{{row[0]}}</td> 
+                    <td>{{row[1]}}</td> 
+                    
+                </tr> 
+         
+        </tbody> 
+    </table>   
+</body>
+<Script>
+
+    if(annyang) {
+       
+       var commands = {
+         
+          'رجوع':function(){
+           window.location.replace("{{ url_for('afterLogin',name=row[0]) }}")
+   
+         },
+        
+         }
+       };
+       annyang.setLanguage('ar-JO');
+       // Add our commands to annyang
+       annyang.addCommands(commands);
+     
+   
+       annyang.start({ autoRestart: true, continuous: true });
+   
+   </script>  
+    {% endfor %} 
+</html>
